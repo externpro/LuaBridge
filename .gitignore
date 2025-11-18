@@ -11,3 +11,7 @@ CMakeFiles/
 *.vcxproj.user
 .vs/
 .vscode
+# externpro
+.env
+_bld*/
+docker-compose.override.yml

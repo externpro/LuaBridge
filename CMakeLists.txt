@@ -1,8 +1,11 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.10...3.31)
 
+set(CMAKE_PROJECT_TOP_LEVEL_INCLUDES .devcontainer/cmake/xproinc.cmake)
 project(LuaBridge)
 
 include(CMakeDependentOption)
+include(GNUInstallDirs)
+include(xpflags)
 
 option(LUABRIDGE_CXX17 "Use C++17 standard if supported by compiler" OFF)
 
@@ -33,7 +36,6 @@ endif()
 if(LUABRIDGE_TESTING)
     set(gtest_force_shared_crt ON CACHE BOOL "Use /MD and /MDd" FORCE)
     add_subdirectory(third_party/gtest EXCLUDE_FROM_ALL)
-    add_library(GTest::gtest ALIAS gtest)
     enable_testing()
     add_subdirectory(Tests)
 endif()
