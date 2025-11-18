@@ -1,32 +1,32 @@
 set(LUABRIDGE_HEADERS
-    ${CMAKE_CURRENT_SOURCE_DIR}/LuaBridge/List.h
-    ${CMAKE_CURRENT_SOURCE_DIR}/LuaBridge/LuaBridge.h
-    ${CMAKE_CURRENT_SOURCE_DIR}/LuaBridge/Map.h
-    ${CMAKE_CURRENT_SOURCE_DIR}/LuaBridge/RefCountedObject.h
-    ${CMAKE_CURRENT_SOURCE_DIR}/LuaBridge/RefCountedPtr.h
-    ${CMAKE_CURRENT_SOURCE_DIR}/LuaBridge/UnorderedMap.h
-    ${CMAKE_CURRENT_SOURCE_DIR}/LuaBridge/Vector.h
-    ${CMAKE_CURRENT_SOURCE_DIR}/LuaBridge/Array.h
+    LuaBridge/List.h
+    LuaBridge/LuaBridge.h
+    LuaBridge/Map.h
+    LuaBridge/RefCountedObject.h
+    LuaBridge/RefCountedPtr.h
+    LuaBridge/UnorderedMap.h
+    LuaBridge/Vector.h
+    LuaBridge/Array.h
 )
 
 source_group("LuaBridge" FILES ${LUABRIDGE_HEADERS})
 
 set(LUABRIDGE_DETAIL_HEADERS
-    ${CMAKE_CURRENT_SOURCE_DIR}/LuaBridge/detail/CFunctions.h
-    ${CMAKE_CURRENT_SOURCE_DIR}/LuaBridge/detail/ClassInfo.h
-    ${CMAKE_CURRENT_SOURCE_DIR}/LuaBridge/detail/Config.h
-    ${CMAKE_CURRENT_SOURCE_DIR}/LuaBridge/detail/Constructor.h
-    ${CMAKE_CURRENT_SOURCE_DIR}/LuaBridge/detail/dump.h
-    ${CMAKE_CURRENT_SOURCE_DIR}/LuaBridge/detail/FuncTraits.h
-    ${CMAKE_CURRENT_SOURCE_DIR}/LuaBridge/detail/Iterator.h
-    ${CMAKE_CURRENT_SOURCE_DIR}/LuaBridge/detail/LuaException.h
-    ${CMAKE_CURRENT_SOURCE_DIR}/LuaBridge/detail/LuaHelpers.h
-    ${CMAKE_CURRENT_SOURCE_DIR}/LuaBridge/detail/LuaRef.h
-    ${CMAKE_CURRENT_SOURCE_DIR}/LuaBridge/detail/Namespace.h
-    ${CMAKE_CURRENT_SOURCE_DIR}/LuaBridge/detail/Stack.h
-    ${CMAKE_CURRENT_SOURCE_DIR}/LuaBridge/detail/TypeList.h
-    ${CMAKE_CURRENT_SOURCE_DIR}/LuaBridge/detail/TypeTraits.h
-    ${CMAKE_CURRENT_SOURCE_DIR}/LuaBridge/detail/Userdata.h
+    LuaBridge/detail/CFunctions.h
+    LuaBridge/detail/ClassInfo.h
+    LuaBridge/detail/Config.h
+    LuaBridge/detail/Constructor.h
+    LuaBridge/detail/dump.h
+    LuaBridge/detail/FuncTraits.h
+    LuaBridge/detail/Iterator.h
+    LuaBridge/detail/LuaException.h
+    LuaBridge/detail/LuaHelpers.h
+    LuaBridge/detail/LuaRef.h
+    LuaBridge/detail/Namespace.h
+    LuaBridge/detail/Stack.h
+    LuaBridge/detail/TypeList.h
+    LuaBridge/detail/TypeTraits.h
+    LuaBridge/detail/Userdata.h
 )
 
 source_group("LuaBridge\\detail" FILES ${LUABRIDGE_DETAIL_HEADERS})
