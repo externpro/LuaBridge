@@ -55,6 +55,7 @@ struct A
 
     void mf3(A&) {}
 
+    virtual ~A() = default;
     virtual void vf1() {}
 
     int data;

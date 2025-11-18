@@ -212,7 +212,14 @@ TEST_F(RefCountedPtrTests, AssignOperatorRefSelfAssignment)
 
     luabridge::RefCountedPtr<TestObject> ptr(rawPtr);
 
+#if defined(__clang__)
+#    pragma clang diagnostic push
+#    pragma clang diagnostic ignored "-Wself-assign-overloaded"
+#endif
     const luabridge::RefCountedPtr<TestObject>& returnValue = (ptr = ptr);
+#if defined(__clang__)
+#    pragma clang diagnostic pop
+#endif
 
     ASSERT_EQ(&returnValue, &ptr);
     ASSERT_EQ(ptr, rawPtr);

@@ -239,7 +239,8 @@ TEST_F(LuaRefTests, Assignment)
     ASSERT_TRUE(value.isNumber());
     ASSERT_EQ(5, value.cast<int>());
 
-    value = value;
+    auto copy = value;
+    value = copy;
     ASSERT_EQ(LUA_TNUMBER, value.type());
     ASSERT_TRUE(value.isNumber());
     ASSERT_EQ(5, value.cast<int>());
