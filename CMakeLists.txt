@@ -1,8 +1,10 @@
 cmake_minimum_required(VERSION 3.10...3.31)
 
+set(CMAKE_PROJECT_TOP_LEVEL_INCLUDES .devcontainer/cmake/xproinc.cmake)
 project(LuaBridge)
 
 include(CMakeDependentOption)
+include(xpflags)
 
 option(LUABRIDGE_CXX17 "Use C++17 standard if supported by compiler" OFF)
 
