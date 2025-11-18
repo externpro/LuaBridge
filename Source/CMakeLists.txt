@@ -33,12 +33,10 @@ source_group("LuaBridge\\detail" FILES ${LUABRIDGE_DETAIL_HEADERS})
 
 add_library(LuaBridge INTERFACE)
 
-target_sources(LuaBridge INTERFACE
-    ${LUABRIDGE_HEADERS}
-    ${LUABRIDGE_DETAIL_HEADERS}
+target_include_directories(LuaBridge INTERFACE
+    $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
+    $<INSTALL_INTERFACE:${CMAKE_INSTALL_INCLUDEDIR}>
 )
-
-target_include_directories(LuaBridge INTERFACE ${CMAKE_CURRENT_SOURCE_DIR})
 
 if(LUABRIDGE_CXX17)
     target_compile_definitions(LuaBridge INTERFACE LUABRIDGE_CXX17)
