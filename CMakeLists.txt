@@ -4,6 +4,7 @@ set(CMAKE_PROJECT_TOP_LEVEL_INCLUDES .devcontainer/cmake/xproinc.cmake)
 project(LuaBridge)
 
 include(CMakeDependentOption)
+include(GNUInstallDirs)
 include(xpflags)
 
 option(LUABRIDGE_CXX17 "Use C++17 standard if supported by compiler" OFF)
