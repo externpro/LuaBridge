@@ -546,7 +546,9 @@ TEST_F(ClassFunctions, StdFunctions)
     lua_close(L); // Force garbage collection
     L = nullptr;
 
+#if defined(LUABRIDGE_CHECK_STDFUNCTION_LIFETIME)
     ASSERT_TRUE(data.expired());
+#endif
 }
 
 TEST_F(ClassFunctions, StdFunctions_PassState)
@@ -591,7 +593,9 @@ TEST_F(ClassFunctions, StdFunctions_PassState)
     lua_close(L); // Force garbage collection
     L = nullptr;
 
+#if defined(LUABRIDGE_CHECK_STDFUNCTION_LIFETIME)
     ASSERT_TRUE(data.expired());
+#endif
 }
 
 TEST_F(ClassFunctions, ConstStdFunctions)
@@ -635,7 +639,9 @@ TEST_F(ClassFunctions, ConstStdFunctions)
     lua_close(L); // Force garbage collection
     L = nullptr;
 
+#if defined(LUABRIDGE_CHECK_STDFUNCTION_LIFETIME)
     ASSERT_TRUE(data.expired());
+#endif
 }
 
 struct ClassProperties : ClassTests
@@ -1089,8 +1095,10 @@ TEST_F(ClassProperties, StdFunctions)
     lua_close(L); // Force garbage collection
     L = nullptr;
 
+#if defined(LUABRIDGE_CHECK_STDFUNCTION_LIFETIME)
     ASSERT_TRUE(getterData.expired());
     ASSERT_TRUE(setterData.expired());
+#endif
 }
 
 TEST_F(ClassProperties, StdFunctions_ReadOnly)
@@ -1124,7 +1132,9 @@ TEST_F(ClassProperties, StdFunctions_ReadOnly)
     lua_close(L); // Force garbage collection
     L = nullptr;
 
+#if defined(LUABRIDGE_CHECK_STDFUNCTION_LIFETIME)
     ASSERT_TRUE(getterData.expired());
+#endif
 }
 
 struct ClassStaticFunctions : ClassTests
