@@ -50,6 +50,8 @@ if(MSVC AND CMAKE_SOURCE_DIR STREQUAL PROJECT_SOURCE_DIR)
 endif()
 
 if(DEFINED XP_NAMESPACE)
+    find_package(lua REQUIRED)
+    target_link_libraries(LuaBridge INTERFACE ${LUA_LIBRARIES})
     set(targetsFile LuaBridgeTargets)
     set(XP_INSTALL_CMAKEDIR ${CMAKE_INSTALL_DATADIR}/cmake)
     xpPackageDevel(TARGETS_FILE ${targetsFile} DEPS lua LIBRARIES ${XP_NAMESPACE}::LuaBridge)
