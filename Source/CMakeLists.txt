@@ -53,8 +53,13 @@ if(DEFINED XP_NAMESPACE)
     find_package(lua REQUIRED)
     target_link_libraries(LuaBridge INTERFACE ${LUA_LIBRARIES})
     set(targetsFile LuaBridgeTargets)
-    set(XP_INSTALL_CMAKEDIR ${CMAKE_INSTALL_DATADIR}/cmake)
-    xpPackageDevel(TARGETS_FILE ${targetsFile} DEPS lua LIBRARIES ${XP_NAMESPACE}::LuaBridge)
+    xpExternPackage(NAMESPACE ${XP_NAMESPACE}
+      TARGETS_FILE ${targetsFile} LIBRARIES LuaBridge
+      BASE 2.10 XPDIFF "patch" DEPS lua
+      WEB "http://vinniefalco.github.io/LuaBridge/Manual.html 'LuaBridge Reference Manual'" UPSTREAM "github.com/vinniefalco/LuaBridge"
+      DESC "a lightweight, dependency-free library for binding Lua to C++"
+      LICENSE "[MIT](https://github.com/vinniefalco/LuaBridge/#official-repository 'MIT License')"
+      )
     install(TARGETS LuaBridge EXPORT ${targetsFile})
     install(EXPORT ${targetsFile} DESTINATION ${XP_INSTALL_CMAKEDIR} NAMESPACE ${XP_NAMESPACE}::)
 endif()
