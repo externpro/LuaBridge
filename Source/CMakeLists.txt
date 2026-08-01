@@ -49,19 +49,19 @@ if(MSVC AND CMAKE_SOURCE_DIR STREQUAL PROJECT_SOURCE_DIR)
     )
 endif()
 
-if(DEFINED XP_NAMESPACE)
+if(COMMAND xpExternPackage)
     find_package(lua REQUIRED)
     target_link_libraries(LuaBridge INTERFACE ${LUA_LIBRARIES})
     set(targetsFile LuaBridgeTargets)
-    xpExternPackage(NAMESPACE ${XP_NAMESPACE}
-      TARGETS_FILE ${targetsFile} LIBRARIES LuaBridge
-      BASE 2.10 XPDIFF "patch" DEPS lua
+    xpExternPackage(TARGETS_FILE ${targetsFile}
+      LIBRARIES LuaBridge DEFAULT_TARGETS LuaBridge
+      BASE 2.10 XPDIFF "patch" PVT_DEPS Threads
       WEB "http://vinniefalco.github.io/LuaBridge/Manual.html 'LuaBridge Reference Manual'" UPSTREAM "github.com/vinniefalco/LuaBridge"
       DESC "a lightweight, dependency-free library for binding Lua to C++"
       LICENSE "[MIT](https://github.com/vinniefalco/LuaBridge/#official-repository 'MIT License')"
       )
     install(TARGETS LuaBridge EXPORT ${targetsFile})
-    install(EXPORT ${targetsFile} DESTINATION ${CMAKE_INSTALL_CMAKEDIR} NAMESPACE ${XP_NAMESPACE}::)
+    install(EXPORT ${targetsFile} DESTINATION ${CMAKE_INSTALL_CMAKEDIR} NAMESPACE ${CMAKE_PROJECT_NAME}::)
 endif()
 
 if(CMAKE_SOURCE_DIR STREQUAL PROJECT_SOURCE_DIR)
