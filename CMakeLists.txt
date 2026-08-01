@@ -1,6 +1,5 @@
-cmake_minimum_required(VERSION 3.10...3.31)
+cmake_minimum_required(VERSION 3.10...4.3)
 
-set(CMAKE_PROJECT_TOP_LEVEL_INCLUDES .devcontainer/cmake/xproinc.cmake)
 project(LuaBridge)
 
 include(CMakeDependentOption)
