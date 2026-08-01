@@ -2,12 +2,13 @@
 
 |project|license [^_l]|description [dependencies]|version|source|diff [^_d]|
 |-------|-------------|--------------------------|-------|------|----------|
-|<a id='luabridge' />[luabridge](http://vinniefalco.github.io/LuaBridge/Manual.html 'LuaBridge Reference Manual')|[MIT](https://github.com/vinniefalco/LuaBridge/#official-repository 'MIT License')|a lightweight, dependency-free library for binding Lua to C++ [deps: _lua_]| |[upstream](https://github.com/vinniefalco/LuaBridge 'github.com/vinniefalco/LuaBridge')|  [patch]|
-|<a id='lua' />[lua](http://www.lua.org/)|[MIT](http://www.lua.org/license.html 'MIT License')|a powerful, fast, lightweight, embeddable scripting language|[xpv5.2.3.3](https://github.com/externpro/lua/releases/tag/xpv5.2.3.3 'release')|[repo](https://github.com/externpro/lua 'github.com/externpro/lua') [upstream](https://github.com/lua/lua 'github.com/lua/lua')|[diff](https://github.com/externpro/lua/compare/v5.2.3...xpv5.2.3.3 'github.com/externpro/lua/compare/v5.2.3...xpv5.2.3.3') [patch]|
+|<a id='LuaBridge' />[LuaBridge](http://vinniefalco.github.io/LuaBridge/Manual.html 'LuaBridge Reference Manual')|[MIT](https://github.com/vinniefalco/LuaBridge/#official-repository 'MIT License')|a lightweight, dependency-free library for binding Lua to C++ [deps: _lua_] [pvt deps: _Threads_]| |[upstream](https://github.com/vinniefalco/LuaBridge 'github.com/vinniefalco/LuaBridge')|  [patch]|
+|<a id='lua' />[lua](http://www.lua.org/)|[MIT](http://www.lua.org/license.html 'MIT License')|a powerful, fast, lightweight, embeddable scripting language|[xpv5.2.3.4](https://github.com/externpro/lua/releases/tag/xpv5.2.3.4 'release')|[repo](https://github.com/externpro/lua 'github.com/externpro/lua') [upstream](https://github.com/lua/lua 'github.com/lua/lua')|[diff](https://github.com/externpro/lua/compare/v5.2.3...xpv5.2.3.4 'github.com/externpro/lua/compare/v5.2.3...xpv5.2.3.4') [patch]|
+|<a id='Threads' />[Threads](https://cmake.org/cmake/help/latest/module/FindThreads.html)|[LGPL-2.1-or-later](https://spdx.org/licenses/LGPL-2.1-or-later.html 'GNU Lesser General Public License v2.1 or later')|Finds and determines the thread library of the system for multithreading support|[xpv1.0.4](https://github.com/externpro/Threads/releases/tag/xpv1.0.4 'release')|[repo](https://github.com/externpro/Threads 'github.com/externpro/Threads')|[diff](https://github.com/externpro/Threads/compare/v0...xpv1.0.4 'github.com/externpro/Threads/compare/v0...xpv1.0.4') [bin]|
 
 ![deps](xprodeps.svg 'dependencies')
 
-Dependency version check: all 1 parent-manifest versions match pinned versions.
+Dependency version check: all 2 parent-manifest versions match pinned versions.
 
 |diff  |description|
 |------|-----------|
